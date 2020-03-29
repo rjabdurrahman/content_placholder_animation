@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes placeHolderShimmer {
+            0% {
+                background-position: -468px 0
+            }
+
+            100% {
+                background-position: 468px 0
+            }
+        }
+
+        .preload-animation {
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-name: placeHolderShimmer;
+            animation-timing-function: linear;
+            background: #f6f7f8;
+            background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+            background-size: 800px 104px;
+            position: relative;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        div {
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container flex">
+        <div class="preload-animation" style="height: 90px; width: 90px;"></div>
+        <div style="width: 100%;">
+            <div class="preload-animation" style="height: 20px; width: 100%;margin: 4px;"></div>
+            <div class="preload-animation" style="height: 20px; width: 100%;margin: 4px;"></div>
+        </div>
+    </div>
+</body>
+
+</html>
